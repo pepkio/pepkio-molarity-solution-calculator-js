@@ -1,0 +1,71 @@
+{
+  "name": "pepkio-molarity-solution-calculator",
+  "version": "0.1.0",
+  "description": "Call the Pepkio Molarity Solution Calculator REST API from Node.js with typed ESM imports and a CLI.",
+  "license": "MIT",
+  "author": "Pepkio Team",
+  "homepage": "https://www.pepkio.com/tools/molarity-solution-calculator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepkio/pepkio-molarity-solution-calculator-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pepkio/pepkio-molarity-solution-calculator-js/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "module",
+  "keywords": [
+    "molarity",
+    "solution-prep",
+    "dilution",
+    "molarity-solution-calculator",
+    "pepkio",
+    "laboratory-calculator",
+    "concentration",
+    "bioinformatics",
+    "life-sciences",
+    "typescript",
+    "node",
+    "rest-api",
+    "lab-protocol",
+    "scientific-computing"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "pepkio-molarity-solution-calculator": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run test/client.test.ts",
+    "test:integration": "vitest run test/integration.test.ts",
+    "test:all": "vitest run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "undici": "^7.27.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "dotenv": "^17.4.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.6"
+  }
+}
