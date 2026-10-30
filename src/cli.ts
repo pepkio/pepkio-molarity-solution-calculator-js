@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// SPDX-License-Identifier: MIT
 /** Command-line interface for pepkio-molarity-solution-calculator. */
 
 import { Command } from "commander";
